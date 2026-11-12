@@ -1,0 +1,75 @@
+vboxuser@ubuntu26:~/Documents/LINUX_Uroci$ cd ..
+vboxuser@ubuntu26:~/Documents$ ls
+LINUX_Uroci
+vboxuser@ubuntu26:~/Documents$ mkdir 'Uchilisten_Proekt'
+vboxuser@ubuntu26:~/Documents$ cd Uchilisten_Proekt
+vboxuser@ubuntu26:~/Documents/Uchilisten_Proekt$ mkdir "Materiali" "Predavane" "Arhiv"
+vboxuser@ubuntu26:~/Documents/Uchilisten_Proekt$ ls
+Arhiv  Materiali  Predavane
+vboxuser@ubuntu26:~/Documents/Uchilisten_Proekt$ cd Materiali
+vboxuser@ubuntu26:~/Documents/Uchilisten_Proekt/Materiali$ touch plan.txt ekip.txt zadachi.txt
+vboxuser@ubuntu26:~/Documents/Uchilisten_Proekt/Materiali$ ~
+bash: /home/vboxuser: Is a directory
+vboxuser@ubuntu26:~/Documents/Uchilisten_Proekt/Materiali$ cd
+vboxuser@ubuntu26:~$ cd Home
+bash: cd: Home: No such file or directory
+vboxuser@ubuntu26:~$ cd Desktop
+vboxuser@ubuntu26:~/Desktop$ cd zad 1
+bash: cd: too many arguments
+vboxuser@ubuntu26:~/Desktop$ cd 'zad 1'
+vboxuser@ubuntu26:~/Desktop/zad 1$ touch zad1.txt
+vboxuser@ubuntu26:~/Desktop/zad 1$ cd
+vboxuser@ubuntu26:~$ cd Documents
+vboxuser@ubuntu26:~/Documents$ cd Uchilisten_Proekt
+vboxuser@ubuntu26:~/Documents/Uchilisten_Proekt$ cd Materiali
+vboxuser@ubuntu26:~/Documents/Uchilisten_Proekt/Materiali$ ls
+ekip.txt  plan.txt  zadachi.txt
+vboxuser@ubuntu26:~/Documents/Uchilisten_Proekt/Materiali$ cp plan.txt ~/Documents/Uchilisten_Proekt/Predavane
+vboxuser@ubuntu26:~/Documents/Uchilisten_Proekt/Materiali$ cd ..
+vboxuser@ubuntu26:~/Documents/Uchilisten_Proekt$ cd Predavane
+vboxuser@ubuntu26:~/Documents/Uchilisten_Proekt/Predavane$ cp plan.txt plan_final.txt
+vboxuser@ubuntu26:~/Documents/Uchilisten_Proekt/Predavane$ rm plan.txt
+vboxuser@ubuntu26:~/Documents/Uchilisten_Proekt/Predavane$ touch proverka.txt
+vboxuser@ubuntu26:~/Documents/Uchilisten_Proekt/Predavane$ cp plan_final.tx plan_final.txt
+cp: cannot stat 'plan_final.tx': No such file or directory
+vboxuser@ubuntu26:~/Documents/Uchilisten_Proekt/Predavane$ cp plan_final.tx ~/Documents/Uchilisten_Preokt/Arhiv
+cp: cannot stat 'plan_final.tx': No such file or directory
+vboxuser@ubuntu26:~/Documents/Uchilisten_Proekt/Predavane$ cp plan-final.txt ~/Documents/Uchilisten-Proekt/Arhiv
+cp: cannot stat 'plan-final.txt': No such file or directory
+vboxuser@ubuntu26:~/Documents/Uchilisten_Proekt/Predavane$ cp plan_final.txt ~/Documents/Uchilisten_Proekt/Arhiv
+vboxuser@ubuntu26:~/Documents/Uchilisten_Proekt/Predavane$ cd //
+vboxuser@ubuntu26://$ cd..
+cd..: command not found
+vboxuser@ubuntu26://$ cd
+vboxuser@ubuntu26:~$ cd Documents
+vboxuser@ubuntu26:~/Documents$ cd Uchilisten_Proekt
+vboxuser@ubuntu26:~/Documents/Uchilisten_Proekt$ cd Materiali
+vboxuser@ubuntu26:~/Documents/Uchilisten_Proekt/Materiali$ ls
+ekip.txt  plan.txt  zadachi.txt
+vboxuser@ubuntu26:~/Documents/Uchilisten_Proekt/Materiali$ cp ekip.txt ~/Documents/Arhiv
+vboxuser@ubuntu26:~/Documents/Uchilisten_Proekt/Materiali$ cp ekip.txt ~/Documents/Uchilisten_Proekt/Arhiv
+vboxuser@ubuntu26:~/Documents/Uchilisten_Proekt/Materiali$ cd ..
+vboxuser@ubuntu26:~/Documents/Uchilisten_Proekt$ cd Arhiv
+vboxuser@ubuntu26:~/Documents/Uchilisten_Proekt/Arhiv$ ls
+ekip.txt  plan_final.txt
+vboxuser@ubuntu26:~/Documents/Uchilisten_Proekt/Arhiv$ mkdir Dopalnitelno
+vboxuser@ubuntu26:~/Documents/Uchilisten_Proekt/Arhiv$ cd ..
+vboxuser@ubuntu26:~/Documents/Uchilisten_Proekt$ cd Predavane
+vboxuser@ubuntu26:~/Documents/Uchilisten_Proekt/Predavane$ cp proverka.txt ~/Documents/Uchilisten_Proekt/Arhiv/Dopalnitelno
+vboxuser@ubuntu26:~/Documents/Uchilisten_Proekt/Predavane$ cd ..
+vboxuser@ubuntu26:~/Documents/Uchilisten_Proekt$ ls -R
+.:
+Arhiv  Materiali  Predavane
+
+./Arhiv:
+Dopalnitelno  ekip.txt  plan_final.txt
+
+./Arhiv/Dopalnitelno:
+proverka.txt
+
+./Materiali:
+ekip.txt  plan.txt  zadachi.txt
+
+./Predavane:
+plan_final.txt  proverka.txt
+

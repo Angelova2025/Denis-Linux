@@ -1,0 +1,66 @@
+vboxuser@ubuntu26:~/Documents$ ls
+vboxuser@ubuntu26:~/Documents$ mkdir "LINUX_Uroci"
+vboxuser@ubuntu26:~/Documents$ cd "LINUX_Uroci"
+vboxuser@ubuntu26:~/Documents/LINUX_Uroci$ mkdir Teoria Praktika
+vboxuser@ubuntu26:~/Documents/LINUX_Uroci$ ls
+Praktika  Teoria
+vboxuser@ubuntu26:~/Documents/LINUX_Uroci$ cd Teoria
+vboxuser@ubuntu26:~/Documents/LINUX_Uroci/Teoria$ touch komandi.txt uprajnenia.txt
+vboxuser@ubuntu26:~/Documents/LINUX_Uroci/Teoria$ cp uprajnenia.txt
+cp: missing destination file operand after 'uprajnenia.txt'
+Try 'cp --help' for more information.
+vboxuser@ubuntu26:~/Documents/LINUX_Uroci/Teoria$ ls
+komandi.txt  uprajnenia.txt
+vboxuser@ubuntu26:~/Documents/LINUX_Uroci/Teoria$ cp uprajnenia.txt Praktika
+vboxuser@ubuntu26:~/Documents/LINUX_Uroci/Teoria$ cd ..
+vboxuser@ubuntu26:~/Documents/LINUX_Uroci$ cd Praktika
+vboxuser@ubuntu26:~/Documents/LINUX_Uroci/Praktika$ ls
+vboxuser@ubuntu26:~/Documents/LINUX_Uroci/Praktika$ cp uprajnenia.txt Teoria Praktika
+cp: target 'Praktika': No such file or directory
+vboxuser@ubuntu26:~/Documents/LINUX_Uroci/Praktika$ cp uprajnenia.txt Teoria
+cp: cannot stat 'uprajnenia.txt': No such file or directory
+vboxuser@ubuntu26:~/Documents/LINUX_Uroci/Praktika$ cd ..
+vboxuser@ubuntu26:~/Documents/LINUX_Uroci$ cd Teoria
+vboxuser@ubuntu26:~/Documents/LINUX_Uroci/Teoria$ cp uprajnenia.txt Teoria
+vboxuser@ubuntu26:~/Documents/LINUX_Uroci/Teoria$ ls
+Praktika  Teoria  komandi.txt  uprajnenia.txt
+vboxuser@ubuntu26:~/Documents/LINUX_Uroci/Teoria$ cp uprajnenia.txt Praktika
+vboxuser@ubuntu26:~/Documents/LINUX_Uroci/Teoria$ cd ..
+vboxuser@ubuntu26:~/Documents/LINUX_Uroci$ cd Praktika
+vboxuser@ubuntu26:~/Documents/LINUX_Uroci/Praktika$ ls
+vboxuser@ubuntu26:~/Documents/LINUX_Uroci/Praktika$ cp uprajnenia.txt uprajnenia.txt
+cp: cannot stat 'uprajnenia.txt': No such file or directory
+vboxuser@ubuntu26:~/Documents/LINUX_Uroci/Praktika$ cd ..
+vboxuser@ubuntu26:~/Documents/LINUX_Uroci$ cd Teoria
+vboxuser@ubuntu26:~/Documents/LINUX_Uroci/Teoria$ cp uprajnenia.txt uprajneniaCopy.txt
+vboxuser@ubuntu26:~/Documents/LINUX_Uroci/Teoria$ mv uprajneniaCopy.txt Praktika
+vboxuser@ubuntu26:~/Documents/LINUX_Uroci/Teoria$ mv uprajneniaCopy.txt Praktika/
+mv: cannot stat 'uprajneniaCopy.txt': No such file or directory
+vboxuser@ubuntu26:~/Documents/LINUX_Uroci/Teoria$ mv uprajneniaCopy.txt Documents/LINUX_Uroci/Praktika
+mv: cannot stat 'uprajneniaCopy.txt': No such file or directory
+vboxuser@ubuntu26:~/Documents/LINUX_Uroci/Teoria$ cp uprajnenia.txt uprajneniaCopy.txt
+vboxuser@ubuntu26:~/Documents/LINUX_Uroci/Teoria$ mv uprajneniaCopy.txt Praktika/
+mv: cannot move 'uprajneniaCopy.txt' to 'Praktika/': Not a directory
+vboxuser@ubuntu26:~/Documents/LINUX_Uroci/Teoria$ mv uprajneniaCopy.txt Documents/LINUX_Uroci/Praktika
+mv: cannot move 'uprajneniaCopy.txt' to 'Documents/LINUX_Uroci/Praktika': No such file or directory
+vboxuser@ubuntu26:~/Documents/LINUX_Uroci/Teoria$ mv uprajneniaCopy.txt Praktika/
+mv: cannot move 'uprajneniaCopy.txt' to 'Praktika/': Not a directory
+vboxuser@ubuntu26:~/Documents/LINUX_Uroci/Teoria$ mv uprajneniaCopy.txt Home/Documents/LINUX_Uroci/Praktika
+mv: cannot move 'uprajneniaCopy.txt' to 'Home/Documents/LINUX_Uroci/Praktika': No such file or directory
+vboxuser@ubuntu26:~/Documents/LINUX_Uroci/Teoria$ cp 'uprajneniaCopy.txt' ~/Documents/LINUX_Uroci/Praktika
+vboxuser@ubuntu26:~/Documents/LINUX_Uroci/Teoria$ cd ..
+vboxuser@ubuntu26:~/Documents/LINUX_Uroci$ cd Praktika
+vboxuser@ubuntu26:~/Documents/LINUX_Uroci/Praktika$ ls
+uprajneniaCopy.txt
+vboxuser@ubuntu26:~/Documents/LINUX_Uroci/Praktika$ touch otgovori.txt
+vboxuser@ubuntu26:~/Documents/LINUX_Uroci/Praktika$ cd ..
+vboxuser@ubuntu26:~/Documents/LINUX_Uroci$ ls -R
+.:
+Praktika  Teoria
+
+./Praktika:
+otgovori.txt  uprajneniaCopy.txt
+
+./Teoria:
+komandi.txt  uprajnenia.txt  uprajneniaCopy.txt
+
